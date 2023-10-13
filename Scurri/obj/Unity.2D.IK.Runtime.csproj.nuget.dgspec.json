@@ -1,0 +1,327 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.2D.IK.Runtime.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.2D.IK.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.2D.IK.Runtime.csproj",
+        "projectName": "Unity.2D.IK.Runtime",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.2D.IK.Runtime.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj"
+              },
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.InternalAPIEngineBridge.001.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.InternalAPIEngineBridge.001.csproj",
+        "projectName": "Unity.InternalAPIEngineBridge.001",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\Unity.InternalAPIEngineBridge.001.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj"
+              },
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.TestRunner.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.UI.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEditor.TestRunner.csproj"
+              },
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj"
+              },
+              "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj": {
+                "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.TestRunner.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\UnityEngine.UI.csproj",
+        "packagesPath": "C:\\Users\\socce\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\socce\\OneDrive - acu.edu\\Documents\\Actual Homework\\ITC\\Scurri\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\socce\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
