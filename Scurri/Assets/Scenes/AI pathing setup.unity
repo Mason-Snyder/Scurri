@@ -476,11 +476,10 @@ GameObject:
   m_Component:
   - component: {fileID: 385753524}
   - component: {fileID: 385753522}
-  - component: {fileID: 385753527}
+  - component: {fileID: 385753528}
   - component: {fileID: 385753526}
   - component: {fileID: 385753525}
   - component: {fileID: 385753523}
-  - component: {fileID: 385753528}
   m_Layer: 0
   m_Name: hunter
   m_TagString: Untagged
@@ -649,18 +648,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &385753527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385753519}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b5e51c229c7094ab8c5b2e9473c4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &385753528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,14 +660,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae8f10c6b50c824982b581f21ffaad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  destPoint: {x: 0, y: 0, z: 0}
+  destPoint: {x: 0, y: 0}
   range: 5
+  homeDegree: 1
+  zoom: 1
+  corou: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
