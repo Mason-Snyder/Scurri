@@ -1,3 +1,8 @@
+// enemey control brain, by Mason Snyder, last edited 10/13/23
+//=======================================================
+// For discerning viable path to be accesible from a given area, have non-hitboxed geometry layer invisible objects and check raycast on the player 
+// layermask to be false, implement for multiple hunter zones
+//=======================================================
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
