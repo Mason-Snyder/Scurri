@@ -1,13 +1,13 @@
 // enemey control brain, by Mason Snyder, last edited 10/13/23
-//=======================================================
-// For discerning viable path to be accesible from a given area, have non-hitboxed geometry layer invisible objects and check raycast on the player 
-// layermask to be false, implement for multiple hunter zones
-//=======================================================
+
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Tilemaps;
 
 public class AIpatrol : MonoBehaviour
 {
@@ -25,17 +25,18 @@ public class AIpatrol : MonoBehaviour
     [SerializeField] private LayerMask groundLayer, playerLayer; // for raycasting, confirming on navmesh and line of sight respectively
     [SerializeField] private actions action, distAct, lastAction;
     [SerializeField] private bool sightLine;
+    private Tilemap navMap;
     private float targetDist;
     private bool corou = true; 
     private RaycastHit2D hit;
-
+ 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player =  GameObject.Find("scurri'd");
         playerLayer = LayerMask.GetMask("geometry", "player");
         groundLayer = LayerMask.GetMask("navigation");
-
+        navMap = GameObject.Find("floorWalk").gameObject.GetComponent<Tilemap>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
@@ -46,10 +47,14 @@ public class AIpatrol : MonoBehaviour
     private void FixedUpdate() // check line of sight to target
     {
         hit = Physics2D.Raycast(this.transform.position, (player.transform.position - this.transform.position).normalized, trackRadius, playerLayer);
-        if (LayerMask.LayerToName(hit.transform.gameObject.layer) == "player")
+        if (hit && hit.transform.CompareTag("Player"))
+        {
             sightLine = true;
+        }
         else
-            sightLine= false;
+        {
+            sightLine = false;
+        }
     }
 
     private void Update()
@@ -118,8 +123,8 @@ public class AIpatrol : MonoBehaviour
     {
         do
         {
-            destPoint = new Vector2(transform.position.x + Random.Range(-range, range), transform.position.y + Random.Range(-range, range));
-            if (Physics2D.Raycast(destPoint, Vector2.zero, 1, groundLayer)) // check for being on navmesh
+          destPoint = new Vector2(transform.position.x + Random.Range(-range, range), transform.position.y + Random.Range(-range, range));    
+          if (validPath()) // check for being on navmesh
                 action = actions.go;
         }
         while (action != actions.go);
@@ -132,11 +137,18 @@ public class AIpatrol : MonoBehaviour
         do
         {
             destPoint = new Vector2(transform.position.x + Random.Range(-range, range), transform.position.y + Random.Range(-range, range));
-            if ((Vector2.Distance(destPoint, player.transform.position) <= targetDist * homeDegree) && Physics2D.Raycast(destPoint, Vector2.zero, 1, groundLayer))
+            if ((Vector2.Distance(destPoint, player.transform.position) <= targetDist * homeDegree) && validPath())
                 action = actions.go;
         }
         while (action != actions.go);
         lastAction = actions.seekSearch;
         Patrol(); // same as above
+    }
+
+    public bool validPath()
+    {
+        NavMeshPath path = new NavMeshPath();
+        agent.CalculatePath(destPoint, path);
+        return path.status == NavMeshPathStatus.PathComplete && navMap.HasTile(new Vector3Int(Mathf.RoundToInt(destPoint.x), Mathf.RoundToInt(destPoint.y), 0));
     }
 }
