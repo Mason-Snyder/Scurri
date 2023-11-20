@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject
         itemPrefab,
         itemImage,
+        healthImage,
         canvas;
     public int
         itemNo,
@@ -20,7 +21,8 @@ public class GameManager : MonoBehaviour
     private bool[]
         itemLocFlags;
     private Vector2
-        nextUIPos;
+        nextUIPos,
+        nextHealthPos;
     void Start()
     {
         itemLocFlags = new bool[itemLocs.Length]; // initialize flags to false and choose first item to flag and make
@@ -29,6 +31,14 @@ public class GameManager : MonoBehaviour
         itemLocFlags[itemNo] = true;
         GameObject.Instantiate(itemPrefab, itemLocs[itemNo].transform.position, Quaternion.identity);
         nextUIPos = new Vector2(-65, -50);
+        nextHealthPos = new Vector2(65, -50);
+
+        for (int i = 0; i <= settingsPref.chosenDifficulty; i++)
+        {
+            RectTransform newImage = GameObject.Instantiate(healthImage, canvas.transform, false).GetComponent<RectTransform>();
+            newImage.anchoredPosition = nextHealthPos;
+            nextHealthPos = new Vector2(nextHealthPos.x + 50, nextHealthPos.y);
+        }
     }
 
     void Update()
