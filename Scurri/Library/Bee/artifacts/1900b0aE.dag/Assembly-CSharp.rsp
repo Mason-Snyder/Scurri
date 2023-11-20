@@ -393,7 +393,9 @@
 "Assets/scripts/AIpatrol.cs"
 "Assets/scripts/controls.cs"
 "Assets/scripts/GameManager.cs"
+"Assets/scripts/menuMangager.cs"
 "Assets/scripts/pickup.cs"
+"Assets/scripts/settingsPref.cs"
 "Assets/scripts/shadowHide.cs"
 -langversion:9.0
 

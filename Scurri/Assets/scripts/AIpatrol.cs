@@ -17,16 +17,20 @@ public class AIpatrol : MonoBehaviour
     public Vector2 destPoint;
     public float // behaviour congif, can add numbered vars for additional radii levels without extra functions
         range = 20,
-        trackRadius = 5,
+        trackRadius = 8,
         seekRadius1 = 10,
         homeDegree1 = 1.25f,
-        homeDegree;
+        homeDegree,
+        speedupRate = 4;
     private enum actions { search, go, track, seekSearch, none }
     [SerializeField] private LayerMask groundLayer, playerLayer; // for raycasting, confirming on navmesh and line of sight respectively
     [SerializeField] private actions action, distAct, lastAction;
     [SerializeField] private bool sightLine;
     private Tilemap navMap;
-    private float targetDist;
+    private float 
+        targetDist,
+        dynamicTrackRadius,
+        cachedSpeed;
     private bool corou = true; 
     private RaycastHit2D hit;
  
@@ -41,8 +45,11 @@ public class AIpatrol : MonoBehaviour
         agent.updateUpAxis = false;
 
         targetDist = Mathf.Infinity;
+        dynamicTrackRadius = trackRadius * 2;
+        cachedSpeed = agent.speed;
 
         StartCoroutine(getDist());
+        StartCoroutine(trackSpeed());
     }
     private void FixedUpdate() // check line of sight to target
     {
@@ -150,5 +157,23 @@ public class AIpatrol : MonoBehaviour
         NavMeshPath path = new NavMeshPath();
         agent.CalculatePath(destPoint, path);
         return path.status == NavMeshPathStatus.PathComplete && navMap.HasTile(new Vector3Int(Mathf.RoundToInt(destPoint.x), Mathf.RoundToInt(destPoint.y), 0));
+    }
+
+    IEnumerator trackSpeed()
+    {
+        while (true)
+        {
+            if (sightLine && agent.speed < 10)
+            {
+                agent.speed += 0.5f;
+                trackRadius = dynamicTrackRadius;
+            }
+            else if (!sightLine)
+            {
+                agent.speed = cachedSpeed;
+                trackRadius = dynamicTrackRadius / 2;
+            }
+            yield return new WaitForSeconds((10 - agent.speed) / speedupRate);
+        }
     }
 }

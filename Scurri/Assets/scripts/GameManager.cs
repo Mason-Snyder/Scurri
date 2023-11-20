@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,9 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject[]
         itemLocs;
     public GameObject
-        itemPrefab;
-    public TextMeshProUGUI
-        itemText;
+        itemPrefab,
+        itemImage,
+        canvas;
     public int
         itemNo,
         numItems,
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
         reusabilityFraction = 25; // % chance that the spot will be reusable by the system 
     private bool[]
         itemLocFlags;
+    private Vector2
+        nextUIPos;
     void Start()
     {
         itemLocFlags = new bool[itemLocs.Length]; // initialize flags to false and choose first item to flag and make
@@ -25,8 +28,7 @@ public class GameManager : MonoBehaviour
         itemNo = Random.Range(0, itemLocs.Length);
         itemLocFlags[itemNo] = true;
         GameObject.Instantiate(itemPrefab, itemLocs[itemNo].transform.position, Quaternion.identity);
-
-        itemText.text = "Items: " + numItems;
+        nextUIPos = new Vector2(-65, -50);
     }
 
     void Update()
@@ -47,7 +49,9 @@ public class GameManager : MonoBehaviour
             if (Random.Range(0, 100) > reusabilityFraction)
                 itemLocFlags[itemNo] = true;
         }
-       
-        itemText.text = "Items: " + numItems;
+
+        RectTransform newImage = GameObject.Instantiate(itemImage, canvas.transform, false).GetComponent<RectTransform>();
+        newImage.anchoredPosition = nextUIPos; // instantiate image then increase transform
+        nextUIPos = new Vector2(nextUIPos.x - 50, nextUIPos.y);
     }
 }
