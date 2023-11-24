@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
         itemNo, // index for itemLocs and parallel itemLocsFlags
         numItems, // count of how many have been collected
         goalItems = 5, // the required number before another isnt spawned
+        numLives, // number of lives left
         reusabilityFraction = 25; // % chance that a spot will be reusable by the system 
     private bool[]
         itemLocFlags; // flags which spots not to use as the system progresses
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
         nextUIPos = new Vector2(-65, -50); // baseline for itemImage
         nextHealthPos = new Vector2(65, -50); // baseline for HealthImage
         healths = new GameObject[settingsPref.chosenDifficulty + 1]; // makes the array of health pictures proper size
+        numLives = healths.Length; // num lives as product of spawned acorns
 
         for (int i = 0; i <= settingsPref.chosenDifficulty; i++) // for each life determined by difficulty:
         {
@@ -60,5 +64,15 @@ public class GameManager : MonoBehaviour
         RectTransform newImage = GameObject.Instantiate(itemImage, canvas.transform, false).GetComponent<RectTransform>(); // new itemimage for the corner is made, relative child of canvas
         newImage.anchoredPosition = nextUIPos; // set the transform
         nextUIPos = new Vector2(nextUIPos.x - 50, nextUIPos.y); // move the spawn point to the left for the next one preemptively
+    }
+
+    public void death() // called from hunters when touch player
+    {
+        if (--numLives == 0) // decrements lives, checks if out:
+        {
+            settingsPref.neededScreen = numItems + 1; // sets screen to be loaded by menumanager
+            SceneManager.LoadScene("menu"); // loads menu scene
+        }
+        Destroy(healths[numLives]); // destroy the correct corner acorn
     }
 }
